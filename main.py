@@ -2,10 +2,11 @@ import RPi.GPIO as GPIO
 import time
 
 
-pin = 29
-GPIO.setmode(GPIO.BCM)
+pin = 8
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,False)
+time.sleep(3)
 print("set low")
 GPIO.output(pin,True)
 print("set high")
