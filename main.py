@@ -1,12 +1,11 @@
 import RPi.GPIO as GPIO
-import random as rand
 import time
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(15,GPIO.OUT)
-GPIO.output(15,GPIO.LOW)
-rand.seed(102758)
-GPIO.output(15,GPIO.HIGH)
+GPIO.output(15,False)
+GPIO.output(15,True)
 time.sleep(10)
-GPIO.output(15,GPIO.LOW)
+GPIO.output(15,False)
 #me.sleep(rand.randint(0,45))
 GPIO.cleanup()
