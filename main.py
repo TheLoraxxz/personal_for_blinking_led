@@ -1,17 +1,15 @@
 import RPi.GPIO as GPIO
 import time
+import random
 
-
+#setup
 pin = 8
+random.seed("iris haloween party")
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pin,GPIO.OUT)
 GPIO.output(pin,False)
-time.sleep(3)
-print("set low")
-GPIO.output(pin,True)
-print("set high")
-time.sleep(10)
-GPIO.output(pin,False)
-print("set low")
-#me.sleep(rand.randint(0,45))
-GPIO.cleanup()
+while True:
+    time.sleep(random.randint(12,20))
+    GPIO.output(pin,True)
+    time.sleep(1)
+    GPIO.output(pin,False)
